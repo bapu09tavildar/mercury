@@ -1,0 +1,14 @@
+<table>
+	<th>Author</th>
+	<th>Publisher</th>
+	<th>Title</th>
+	<th>Action</th>
+	<%@articals.each do |artical|%>
+		<tr>
+			<td><%=artical.auth_name%></td>
+			<td><%=artical.publication_name%></td>
+			<td><%=artical.title%></td>
+			<td><%=link_to "View", artical_path(artical)%></td>
+		</tr>
+	<%end%>
+</table>
